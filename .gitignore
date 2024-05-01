@@ -5,9 +5,10 @@
 /.pnp
 .pnp.js
 /.history
+/.vscode
 # testing
 /coverage
-
+/yarn.lock
 # next.js
 /.next/
 /out/
@@ -26,6 +27,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env
 
 # vercel
 .vercel

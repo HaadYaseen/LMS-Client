@@ -142,7 +142,7 @@ const LoginPage = () => {
                             <div className="flex align-items-center justify-content-between mb-5 gap-5">
                                 <div className="flex align-items-center">
 
-                                    <Link href={`./login`}>Sign In</Link>
+                                    <Link href={`./login`}>Already have an account?</Link>
                                 </div>
                                 <a className="font-medium no-underline ml-2 text-right cursor-pointer" style={{ color: 'var(--primary-color)' }}>
                                     Forgot password?

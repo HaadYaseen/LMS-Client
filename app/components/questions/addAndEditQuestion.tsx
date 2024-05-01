@@ -74,7 +74,7 @@ const AddAndEditQuestion: React.FC<AddAndEditQuestionProps> = (props) => {
     return (
         <>
             <div className="card">
-                    <h5>{props?.isNew ? "New Question" : "Update Question"}</h5>
+                <h5>{props?.isNew ? "New Question" : "Update Question"}</h5>
                 <div className="grid p-fluid mt-3">
                     <div className="field col-12 md:col-5">
                         <Controller
@@ -157,11 +157,11 @@ const AddAndEditQuestion: React.FC<AddAndEditQuestionProps> = (props) => {
                             rules={{ required: "Question marks required", }}
                             render={({ field }) => (
                                 <FormFieldWithLabel
-                                    label="Question Name"
+                                    label="Marks for question"
                                     showCharLimit={false}
                                     showOptionalText={false}
                                     formField={
-                                        <TextField type='number' placeholder="eg. 5"  errorMessage={QuestionErrors?.marks?.message} value={String(field?.value)} onChange={field.onChange} />} />
+                                        <TextField type='number' placeholder="eg. 5" errorMessage={QuestionErrors?.marks?.message} value={String(field?.value)} onChange={field.onChange} />} />
                             )}
                         />
                     </div>
@@ -194,11 +194,11 @@ const AddAndEditQuestion: React.FC<AddAndEditQuestionProps> = (props) => {
                             )}
                         />
                     </div>
-                   
+
                 </div>
                 <div className="gap-2">
-                        <Button label={`${props?.isNew ? "Save" : "Update"}`} onClick={handleSubmit(submitForm)} icon="pi pi-check" />
-                    </div>
+                    <Button label={`${props?.isNew ? "Save" : "Update"}`} onClick={handleSubmit(submitForm)} icon="pi pi-check" />
+                </div>
             </div>
         </>
     )

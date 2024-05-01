@@ -146,25 +146,31 @@ const Layout = ({ children }: ChildContainerProps) => {
     "p-input-filled": layoutConfig.inputStyle === "filled",
     "p-ripple-disabled": !layoutConfig.ripple,
   });
+
   const verifyLogin = () => {
     const token = localStorage?.getItem("lms-token");
     if (_?.isEmpty(token)) {
       router?.push("/auth/login");
     }
   }
-  const showToast = (severity: "success" | "warn" | "info" | "error", summary: string, detail: string, life:number) => {
+
+  const showToast = (severity: "success" | "warn" | "info" | "error", summary: string, detail: string, life: number) => {
     toast?.current?.show({ severity, summary, detail, life });
-    g?.setToaster({ } as any);
+    g?.setToaster({} as any);
   }
-  useEffect(()=>{
+
+  useEffect(() => {
     verifyLogin();
   });
+
   useEffect(() => {
-   if(g?.toaster?.severity && g?.toaster?.summary && g?.toaster?.detail && g?.toaster?.life){
-    showToast(g?.toaster?.severity, g?.toaster?.summary, g?.toaster?.detail, g?.toaster?.life)
-   }
+    if (g?.toaster?.severity && g?.toaster?.summary && g?.toaster?.detail && g?.toaster?.life) {
+      showToast(g?.toaster?.severity, g?.toaster?.summary, g?.toaster?.detail, g?.toaster?.life)
+    }
   }, [g?.toaster?.severity, g?.toaster?.summary, g?.toaster?.detail, g?.toaster?.life])
+
   return (
+
     <React.Fragment>
       <div className={containerClass}>
         <AppTopbar ref={topbarRef} />

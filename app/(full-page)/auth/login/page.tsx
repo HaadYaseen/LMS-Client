@@ -47,7 +47,7 @@ const Registration = () => {
             showSuccess('error', 'Error', error?.message);
         }
     }
-    
+
 
     const containerClassName = classNames('surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden', { 'p-input-filled': layoutConfig.inputStyle === 'filled' });
     return (
@@ -59,7 +59,7 @@ const Registration = () => {
                 onLoaderFinished={() => setPageLoading(0)}
             />
             <div className="flex flex-column align-items-center justify-content-center">
-            <img src={`/layout/images/logo.png`} alt='KOMRAS AI' className="mb-5 w-6rem flex-shrink-0" />
+                <img src={`/layout/images/logo.png`} alt='KOMRAS AI' className="mb-5 w-6rem flex-shrink-0" />
                 <div
                     style={{
                         borderRadius: '56px',
@@ -124,7 +124,7 @@ const Registration = () => {
                             </div>
                             <div className="flex align-items-center justify-content-between mb-5 gap-5">
                                 <div className="flex align-items-center">
-                                    <Link href={`./registration`}>Already Register</Link>
+                                    <Link href={`./registration`}>Not registered?</Link>
                                 </div>
                                 <a className="font-medium no-underline ml-2 text-right cursor-pointer" style={{ color: 'var(--primary-color)' }}>
                                     Forgot password?
